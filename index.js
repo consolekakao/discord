@@ -17,7 +17,11 @@ client.once('ready',() =>{
 });
 
 
-;
+
+
+
+
+let timer = setInterval(english,1000*5);
 
 client.on('message',message =>{
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -33,9 +37,30 @@ client.on('message',message =>{
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');
 	}
+
+
+
+
+
+	function english(){
+		try {
+			client.commands.get(english).execute();
+		} catch (error) {
+			console.error(error);
+			message.reply('timer error!');
+		}
+	}
+	
+
+
+
+
 });
 
 
 
 
+
 client.login(token);
+
+

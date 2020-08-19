@@ -13,7 +13,7 @@ var rand;
         rand =  Math.floor(Math.random() * (args.length -1)) + 1;
         const exampleEmbed = new Discord.MessageEmbed()
         .setColor('#0ee639')
-        .setTitle('접선 장소는  '+arrNumber[rand]+' 입니다.')
+        .setTitle('만날 장소는  '+arrNumber[rand]+' 입니다.')
       message.reply('님에 대한 응답' , exampleEmbed)    
     }
     }
